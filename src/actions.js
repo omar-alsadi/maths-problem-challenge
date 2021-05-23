@@ -30,3 +30,7 @@ export const setCorrectScore = () => ({
 export const setFalseScore = () => ({
     type: 'SET_FALSE_SCORE'
 })
+
+export const setReset = () => ({
+    type: 'SET_RESET'
+})

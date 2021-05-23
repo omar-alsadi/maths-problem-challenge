@@ -1,7 +1,7 @@
 import './App.css';
-import Calculator from './calculator.component';
-import MathProblem from './mathProblem.component'
-import Scores from './scores.component';
+import Calculator from './Components/Calculator/Calculator.component';
+import MathProblem from './Components/MathProblem/MathProblem.component'
+import Scores from './Components/Scores/Scores.component';
 
 const App = () => {
 

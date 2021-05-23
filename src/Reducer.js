@@ -45,6 +45,12 @@ const reducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 falseScore: state.falseScore + 1
             }
+        case 'SET_RESET' :
+            return {
+                ...state,
+                correctScore: 0,
+                falseScore: 0
+            }
         default:
             return state;
     }

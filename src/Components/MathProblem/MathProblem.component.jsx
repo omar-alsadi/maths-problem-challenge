@@ -1,10 +1,10 @@
-import { data } from './math-problem-data'
-import { setIsCorrect, setQuestion, setValue, setDisabled, setCorrectScore, setFalseScore } from './actions'
-import { useStateValue } from './StateProvider'
+import { data } from './Math-problem-data'
+import { setIsCorrect, setQuestion, setValue, setDisabled, setCorrectScore, setFalseScore, setReset } from '../../actions'
+import { useStateValue } from '../../StateProvider'
 
 const MathProblem = () => {
 
-    const [{ isCorrect , question , value , disabled }, dispatch] = useStateValue();
+    const [{ isCorrect , question , value , disabled, correctScore, falseScore }, dispatch] = useStateValue();
 
     const hundleChange = (e) => {
         dispatch(setValue(e.target.value));
@@ -36,6 +36,14 @@ const MathProblem = () => {
             dispatch(setFalseScore())
     }}
 
+    const Reset = () => {
+        // to make reset function works if the player played only
+        if ( correctScore === 0 && falseScore === 0) return;
+
+        dispatch(setReset());
+        getQuestion()
+    }
+
     // to get a question when the app starts
     window.addEventListener('load', () => getQuestion());
             
@@ -63,6 +71,7 @@ const MathProblem = () => {
                                             <button className={'btn'} onClick={getQuestion}>
                                                 {isCorrect === '' ? 'Skip' : 'Next'}
                                             </button>
+                                            <button className={'btn'} onClick={Reset}>Reset</button>
                                         </div>
                                     )
                         } )

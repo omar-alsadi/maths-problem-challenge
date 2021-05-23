@@ -1,5 +1,5 @@
-import { setResult } from "./actions";
-import { useStateValue } from "./StateProvider";
+import { setResult } from "../../actions";
+import { useStateValue } from "../../StateProvider";
 
 const Calculator = () => {
 

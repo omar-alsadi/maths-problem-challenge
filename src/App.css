@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: center;
     color: white;
-    text-shadow: 2px 2px 0 black;
+    text-shadow: 1px 1px 0 black;
     margin: 2rem 0;
 }
 
@@ -43,6 +43,7 @@
   border-radius: 5px;
   margin: 0 auto;
   grid-column: 2 / -1;
+  box-shadow: 5px 5px 2rem rgb(0 0 0 / 20%);
 }
 
 .keypad {
@@ -109,10 +110,12 @@ button {
   border-radius: 10px;
   padding: 1rem 2rem;
   grid-column: 1 / 2;
+  box-shadow: 5px 5px 2rem rgb(0 0 0 / 20%);
 }
 
 h2 {
   margin-bottom: 2rem;
+  font-weight: 400;
 }
 
 input {
