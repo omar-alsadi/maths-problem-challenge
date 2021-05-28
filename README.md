@@ -1,4 +1,4 @@
-# Math Problem Challenge for Zed Network :-)
+# Math Problem Challenge
 
 Live link :
 
